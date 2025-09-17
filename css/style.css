@@ -1,0 +1,412 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*Custom properties Neumorfismo*/
+:root {
+    --color-bg: #ECECEC;
+    --color-text: #2B2B2B;
+    --color-accent1: #5A86FF;
+    --color-accent2: #FF6B6B;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--color-text);
+}
+header {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-accent1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--color-accent2);
+}
+
+nav ul {
+    color: var(--color-accent1);
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    color: var(--color-accent1);
+}
+nav a:hover {
+    color: var(--color-accent2);
+}
+
+/* Hero */
+
+.hero {
+    height: 100vh;
+    background: url(/images/Hero.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10%;
+    text-align: left;
+    position: relative;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero__content {
+    position: relative;
+    max-width: 700px;
+    z-index: 2;
+    color: var(--color-accent2);
+}
+.contenedor__texto .mascota {
+    color: var(--color-accent1); 
+    font-style: normal;
+}
+.titulo {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+  
+
+
+/*Acerca de mí*/
+
+.about {
+    padding: 80px 10%;
+    background: var(--color-bg);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.about__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.about__img {
+    flex-shrink: 0;
+    align-self: center;
+}
+.about__img img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+.about__text {
+    max-width: 500px;
+    text-align: left;
+}
+.about__text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about__buttons {
+    display: flex;
+    gap: 15px;
+}
+.btn {
+    padding: 12px 24px;
+    border: none;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s easy;
+    background: var(--color-accent1);
+    color: #fff;
+}
+.btn:hover {
+    background: var(--color-accent2);
+}
+
+/*Proyectos*/
+
+
+.projects {
+    padding: 80px 10%;
+    background: var(--color-bg);
+    text-align: center;
+}
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--color-text);
+}
+.projects__container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.project__card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.project__card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.project__card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: var(--color-text);
+}
+.project__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+}
+.btn--projects {
+    padding: 8px 18px;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s easy;
+    background: var(--color-accent1);
+    color: #fff;
+}
+.btn--projects:hover {
+    background: var(--color-accent2);
+}
+
+/* Formación y trayectoria profesional*/
+
+.desarrollo {
+    padding: 50px 20px;
+    background: var(--color-bg);
+}
+.desarrollo h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--color-text);
+}
+.contenedor__formacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.formacion, .experiencia {
+    flex: 1;
+}
+.formacion h3, .experiencia h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    border-bottom: 2px solid #CCC;
+    padding-bottom: 5px;
+}
+.formacion ul, .experiencia ul {
+    list-style: none;
+    padding: 0;
+}
+.formacion li, .experiencia li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/*seccion de contacto*/
+
+.contacto {
+    padding: 80px 10%;
+    background: var(--color-bg);
+    text-align: center;
+}
+.contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--color-text);
+}
+.contacto__contenedor {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.contacto__izq {
+    flex: 1 1 400px;
+    background: url(/images/contacto.jpg) center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+.contacto__izq .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+.contacto__izq h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.redes {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.redes a {
+    color: var(--color-accent1);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+.redes a:hover {
+    color: #FF6B6B;
+}
+
+.contacto__der {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.contacto__der h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+textarea {
+    resize: none;
+    height: 120px;
+}
+button {
+    padding: 12px;
+    background: #5A86FF;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #FF6B6B;
+}
+
+/*footer seccion*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #121212;
+    color: #fff;
+}
+.footer__izq {
+    display: flex;
+    gap: 15px;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-accent1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.social i {
+    font-size: 18px;
+    color: #fff;
+}
+.social:hover {
+    background-color: var(--color-accent2);
+}
+
+.footer__der .logo__footer {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--color-accent1);
+    transition: color 0.3s;
+}
+
+.footer__der .logo__footer:hover {
+    color: var(--color-accent2);
+}
