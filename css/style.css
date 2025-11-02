@@ -16,7 +16,7 @@ body {
 }
 header {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -97,6 +97,14 @@ nav a:hover {
     font-size: 3.5rem;
     font-weight: 400;
     line-height: 1.2;
+    padding-bottom: 5px;
+}
+
+.hero__social {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 15px;
 }
   
 
@@ -146,6 +154,7 @@ nav a:hover {
 
 .about__buttons {
     display: flex;
+    justify-content: center;
     gap: 15px;
 }
 .btn {
@@ -170,6 +179,8 @@ nav a:hover {
     padding: 80px 10%;
     background: var(--color-bg);
     text-align: center;
+    min-height: 100vh;
+
 }
 .projects h2 {
     font-size: 36px;
@@ -229,8 +240,9 @@ nav a:hover {
 /* Formación y trayectoria profesional*/
 
 .desarrollo {
-    padding: 50px 20px;
+    padding: 80px 10%;
     background: var(--color-bg);
+    min-height: 100vh;
 }
 .desarrollo h2 {
     text-align: center;
@@ -272,6 +284,7 @@ nav a:hover {
     padding: 80px 10%;
     background: var(--color-bg);
     text-align: center;
+    min-height: 90vh;
 }
 .contacto h2 {
     font-size: 2.5rem;
@@ -284,6 +297,7 @@ nav a:hover {
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
+    padding-top: 80px;
 }
 .contacto__izq {
     flex: 1 1 400px;
@@ -300,6 +314,11 @@ nav a:hover {
     border-radius: 10px;
     color: #fff;
     text-align: center;
+
+    & p {
+        line-height: 2;
+        text-align: start;
+    }
 }
 .contacto__izq h3 {
     font-size: 1.8rem;
@@ -364,6 +383,13 @@ button {
 }
 button:hover {
     background-color: #FF6B6B;
+}
+.contact__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 15px;
 }
 
 /*footer seccion*/
