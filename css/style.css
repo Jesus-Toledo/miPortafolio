@@ -15,17 +15,22 @@ body {
     color: var(--color-text);
 }
 header {
-    position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 60px;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
 }
 .logo {
     font-size: 24px;
@@ -46,12 +51,12 @@ header {
     background-color: var(--color-accent2);
 }
 
-nav ul {
-    color: var(--color-accent1);
+.navbar {
     list-style: none;
     display: flex;
     gap: 30px;
 }
+
 nav a {
     text-decoration: none;
     font-weight: 500;
@@ -60,6 +65,14 @@ nav a {
 }
 nav a:hover {
     color: var(--color-accent2);
+}
+
+.btn__menu {
+    display: none;
+    background: none;
+    border: none;
+    caret-color: var(--color-accent2);
+    cursor: pointer;
 }
 
 /* Hero */

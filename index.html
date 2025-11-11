@@ -6,20 +6,27 @@
     <title>Jesús Toledo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablet.css">
     <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Jesús Toledo</a>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#acerca">Acerca de mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#formacion">Formación</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="#" class="logo">Jesús Toledo</a>
+            <button class="btn__menu" id="menu__btn" aria-label="abrir menú">
+                <img src="images/menu_hamburguesa.svg" alt="Boton hamburguesa">
+            </button>
+            <div id="nav">
+                <ul class="navbar">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#acerca">Acerca de mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#formacion">Formación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <section class="hero">
@@ -248,5 +255,6 @@
 
     <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
     <script src="/scripts/hero.js"></script>
+    <script src="/scripts/menu.js"></script>
 </body>
 </html>

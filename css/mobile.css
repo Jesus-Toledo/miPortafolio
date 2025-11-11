@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+    .btn__menu {
+      display: block;
+    }
+  
+    .navbar {
+      position: absolute;
+      top: 70px;
+      right: 40px;
+      background-color: rgba(0, 0, 0, 0.9);
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  }
